@@ -1,10 +1,9 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.compile.nullAnalysis.mode": "automatic",
-    "gherkin-autocomplete.featuresPath": "src/test/java/com/nopcommerce/app/resources/features",
     "cucumberautocomplete.steps": [
         "src/test/java/com/nopcommerce/app/Step_Defnation/*.java"
     ],
-    "cucumberautocomplete.syncfeatures": "src/test/java/com/nopcommerce/app/resources/features/*.feature",
+    "cucumberautocomplete.syncfeatures": "src/main/resources/features/*.feature",
     "cucumberautocomplete.strictGherkinCompletion": true
 }
