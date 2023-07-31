@@ -23,13 +23,10 @@ public class RegisterTest {
         RegisterPage.maleGender().click();
         RegisterPage.firstName().sendKeys("Hassn");
         RegisterPage.lastName().sendKeys("Hamada");
-        Select dayselect = new Select(RegisterPage.dayDOB());
-        dayselect.selectByValue("24");
-        Select monthselect = new Select(RegisterPage.monthDOB());
-        monthselect.selectByValue("9");
-        Select yearselect = new Select(RegisterPage.yearDOB());
-        yearselect.selectByVisibleText("1999");
-        RegisterPage.email().sendKeys("hassn@hassn.com");
+        new Select(RegisterPage.dayDOB()).selectByValue("24");
+        new Select(RegisterPage.monthDOB()).selectByValue("9");
+        new Select(RegisterPage.yearDOB()).selectByVisibleText("1999");
+        RegisterPage.email().sendKeys("hassn_11@hamada.com");
         RegisterPage.password().sendKeys("123456");
         RegisterPage.confirmPassword().sendKeys("123456");
     }
