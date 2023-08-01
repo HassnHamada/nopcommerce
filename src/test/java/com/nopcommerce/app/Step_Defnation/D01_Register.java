@@ -2,7 +2,6 @@ package com.nopcommerce.app.Step_Defnation;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.nopcommerce.app.Pages.HomePage;

@@ -1,18 +1,12 @@
-Feature: Login | user can login with his data
-    Scenario: User can login with valid Data
-        When Go to login page
-        And Fill all fields with valid data
-        And Click on login button
-        Then Verify login success
-
-    Scenario: User can login with invalid Data
-        When Go to login page
-        And Fill login fields with invalid data
-        And Click on login button
-        Then Verify login failure
-
-    Scenario: User can login with empty fields
-        When Go to login page
-        And Don't fill login fields
-        And Click on login button
-        Then Verify login failure
+@smoke
+Feature: F02_Login | users could use login functionality to use their accounts
+    Scenario: user could login with valid email and password
+        Given user go to login page
+        When user login with "valid" "test@example.com" and "P@ssw0rd"
+        And user press on login button
+        Then user login to the system successfully
+    Scenario: user could login with invalid email and password
+        Given user go to login page
+        When user login with "invalid" "wrong@example.com" and "P@ssw0rd"
+        And user press on login button
+        Then user could not login to the system

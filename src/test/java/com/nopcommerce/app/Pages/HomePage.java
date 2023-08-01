@@ -13,6 +13,7 @@ public class HomePage {
     private final static String _loginHeader = "a[class=\"ico-login\"]";
     private final static String _logoutHeader = "a[href=\"/logout\"]";
     private final static String _registerHeader = "a[href=\"/register?returnUrl=%2F\"]";
+    private final static String _myAccountHeader = "div[class=\"header-links\"] a[href=\"/customer/info\"]";
 
     public static WebElement navElectronics() {
         return Hooks.driver.findElement(By.cssSelector(_navElectronics));
@@ -32,5 +33,9 @@ public class HomePage {
 
     public static WebElement registerHeader() {
         return Hooks.driver.findElement(By.cssSelector(_registerHeader));
+    }
+
+    public static WebElement myAccountHeader() {
+        return Hooks.driver.findElement(By.cssSelector(_myAccountHeader));
     }
 }

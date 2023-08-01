@@ -11,6 +11,7 @@ public class LoginPage {
     private final static String _email = "input[id=\"Email\"]";
     private final static String _password = "input[id=\"Password\"]";
     private final static String _loginButton = "button[class=\"button-1 login-button\"]";
+    private final static String _errorMessage = "div[class=\"message-error validation-summary-errors\"]";
 
     public static WebElement email() {
         return Hooks.driver.findElement(By.cssSelector(_email));
@@ -22,5 +23,9 @@ public class LoginPage {
 
     public static WebElement loginButton() {
         return Hooks.driver.findElement(By.cssSelector(_loginButton));
+    }
+
+    public static WebElement errorMessage() {
+        return Hooks.driver.findElement(By.cssSelector(_errorMessage));
     }
 }
