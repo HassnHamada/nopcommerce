@@ -11,7 +11,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class HoverTest {
+public class D05_HoverCategories {
     @Given("User visits the home page")
     public void go2Home() {
         Hooks.driver.navigate().to(HomePage.URL);

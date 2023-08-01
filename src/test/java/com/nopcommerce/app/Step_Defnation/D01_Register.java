@@ -11,7 +11,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class RegisterTest {
+public class D01_Register {
 
     @When("Go to Register page")
     public void go2RegisterPage() {

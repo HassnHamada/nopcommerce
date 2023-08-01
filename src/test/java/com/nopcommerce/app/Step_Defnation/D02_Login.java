@@ -9,7 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginTest {
+public class D02_Login {
 
     @When("Go to login page")
     public void go2Login() {
