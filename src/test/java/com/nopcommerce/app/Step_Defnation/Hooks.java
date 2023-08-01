@@ -12,7 +12,7 @@ import io.cucumber.java.Before;
 
 public class Hooks {
 
-    final public static int sleep = 1000;
+    final public static int sleep = 100;
 
     private final Duration I_W_DURATION = Duration.ofSeconds(10);
 
@@ -21,8 +21,8 @@ public class Hooks {
     @Before
     public void before() {
         driver = new EdgeDriver();
-        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(I_W_DURATION);
+        driver.manage().window().maximize();
         driver.navigate().to(HomePage.URL);
     }
 

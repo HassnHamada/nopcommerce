@@ -1,3 +1,4 @@
+@test
 @smoke
 Feature: 04_Search | users could search for a certain product
     Scenario Outline: user could search using product name.

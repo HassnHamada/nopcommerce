@@ -22,11 +22,15 @@ public class D04_Search {
     }
 
     @Then("products with {string} should appear")
-    public void assertProducts(String keyword) {
+    public void assertProducts(String keyword) throws InterruptedException {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains(SearchPage.URL));
         for (WebElement product : SearchPage.products()) {
-            softAssert.assertTrue(product.getText().toLowerCase().contains(keyword.toLowerCase()));
+            String actual = product.getText().toLowerCase();
+            String expected = keyword.toLowerCase();
+            String error = String.format("\"%s\" doesn't contain \"%s\"", actual, expected);
+            softAssert.assertEquals(actual, expected);
+            softAssert.assertTrue(actual.contains(expected), error);
         }
         softAssert.assertAll();
     }
