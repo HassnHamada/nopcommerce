@@ -1,4 +1,3 @@
-@smoke
 Feature: Hovering | Teast Hovering and clicking an element in dropdown menu
     Scenario: Hovering on `Electronics` and clicking `Camera & Photo`
         Given User visits the home page

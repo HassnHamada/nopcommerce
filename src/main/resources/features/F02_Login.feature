@@ -1,4 +1,3 @@
-@smoke
 Feature: Login | user can login with his data
     Scenario: User can login with valid Data
         When Go to login page
