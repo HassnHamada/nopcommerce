@@ -29,7 +29,6 @@ public class D04_Search {
             String actual = product.getText().toLowerCase();
             String expected = keyword.toLowerCase();
             String error = String.format("\"%s\" doesn't contain \"%s\"", actual, expected);
-            softAssert.assertEquals(actual, expected);
             softAssert.assertTrue(actual.contains(expected), error);
         }
         softAssert.assertAll();
