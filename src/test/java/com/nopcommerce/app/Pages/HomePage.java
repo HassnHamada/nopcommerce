@@ -1,5 +1,7 @@
 package com.nopcommerce.app.Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -14,6 +16,8 @@ public class HomePage {
     private final static String _logoutHeader = "a[href=\"/logout\"]";
     private final static String _registerHeader = "a[href=\"/register?returnUrl=%2F\"]";
     private final static String _myAccountHeader = "div[class=\"header-links\"] a[href=\"/customer/info\"]";
+    private final static String _currency = "select[id=\"customerCurrency\"]";
+    private final static String _products = "div[class=\"product-grid home-page-product-grid\"] span[class=\"price actual-price\"]";
 
     public static WebElement navElectronics() {
         return Hooks.driver.findElement(By.cssSelector(_navElectronics));
@@ -37,5 +41,13 @@ public class HomePage {
 
     public static WebElement myAccountHeader() {
         return Hooks.driver.findElement(By.cssSelector(_myAccountHeader));
+    }
+
+    public static WebElement currency() {
+        return Hooks.driver.findElement(By.cssSelector(_currency));
+    }
+
+    public static List<WebElement> products() {
+        return Hooks.driver.findElements(By.cssSelector(_products));
     }
 }
