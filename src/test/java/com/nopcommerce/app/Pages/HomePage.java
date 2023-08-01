@@ -18,6 +18,7 @@ public class HomePage {
     private final static String _myAccountHeader = "div[class=\"header-links\"] a[href=\"/customer/info\"]";
     private final static String _currency = "select[id=\"customerCurrency\"]";
     private final static String _products = "div[class=\"product-grid home-page-product-grid\"] span[class=\"price actual-price\"]";
+    private final static String _searchBox = "input[class=\"search-box-text ui-autocomplete-input\"]";
 
     public static WebElement navElectronics() {
         return Hooks.driver.findElement(By.cssSelector(_navElectronics));
@@ -49,5 +50,9 @@ public class HomePage {
 
     public static List<WebElement> products() {
         return Hooks.driver.findElements(By.cssSelector(_products));
+    }
+
+    public static WebElement searchBox() {
+        return Hooks.driver.findElement(By.cssSelector(_searchBox));
     }
 }

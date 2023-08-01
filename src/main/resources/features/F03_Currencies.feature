@@ -1,4 +1,3 @@
-@test
 @smoke
 Feature: F03_Currencies | users could change the displayed currency
     Scenario: users change currency to Euro

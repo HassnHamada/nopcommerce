@@ -32,7 +32,7 @@ public class D02_Login {
     @Then("user login to the system successfully")
     public void assertSuccess() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(Hooks.driver.getCurrentUrl(), "https://demo.nopcommerce.com/");
+        softAssert.assertEquals(Hooks.driver.getCurrentUrl(), HomePage.URL);
         softAssert.assertTrue(HomePage.myAccountHeader().isDisplayed());
         softAssert.assertAll();
     }
