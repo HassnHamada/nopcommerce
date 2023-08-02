@@ -10,7 +10,9 @@ import com.nopcommerce.app.Step_Defnation.Hooks;
 public class HomePage {
     public final static String URL = "https://demo.nopcommerce.com";
 
-    private final static String _navElectronics = "ul[class=\"top-menu notmobile\"] a[href=\"/electronics\"]";
+    private final static String _navComputers = "ul[class=\"top-menu notmobile\"] > li:nth-child(1)";
+    private final static String _navElectronics = "ul[class=\"top-menu notmobile\"] > li:nth-child(2)";
+    private final static String _navApparel = "ul[class=\"top-menu notmobile\"] > li:nth-child(3)";
     private final static String _navCameraPhoto = "ul[class=\"top-menu notmobile\"] a[href=\"/camera-photo\"]";
     private final static String _loginHeader = "a[class=\"ico-login\"]";
     private final static String _logoutHeader = "a[href=\"/logout\"]";
@@ -20,8 +22,16 @@ public class HomePage {
     private final static String _products = "div[class=\"product-grid home-page-product-grid\"] span[class=\"price actual-price\"]";
     private final static String _searchBox = "input[class=\"search-box-text ui-autocomplete-input\"]";
 
+    public static WebElement navComputers() {
+        return Hooks.driver.findElement(By.cssSelector(_navComputers));
+    }
+
     public static WebElement navElectronics() {
         return Hooks.driver.findElement(By.cssSelector(_navElectronics));
+    }
+
+    public static WebElement navApparel() {
+        return Hooks.driver.findElement(By.cssSelector(_navApparel));
     }
 
     public static WebElement navCameraPhoto() {

@@ -12,6 +12,7 @@ public class SearchPage {
 
     private final static String _products = "div[class=\"item-grid\"] h2[class=\"product-title\"] a";
     private final static String _next = "li[class=\"next-page\"] a";
+    private final static String _title = "div[class=\"page-title\"] h1";
 
     public static List<WebElement> products() {
         return Hooks.driver.findElements(By.cssSelector(_products));
@@ -19,5 +20,9 @@ public class SearchPage {
 
     public static WebElement next() {
         return Hooks.driver.findElement(By.cssSelector(_next));
+    }
+
+    public static WebElement title() {
+        return Hooks.driver.findElement(By.cssSelector(_title));
     }
 }

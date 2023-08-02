@@ -1,7 +1,6 @@
+@smoke
 Feature: Hovering | Teast Hovering and clicking an element in dropdown menu
-    Scenario: Hovering on `Electronics` and clicking `Camera & Photo`
-        Given User visits the home page
-        And Move mouse cursor to `Electronics` in navigation bar
-        And Move down to `Camera & Photo`
-        And Click
-        Then User should be in `Camera & Photo` page
+    Scenario: Hovering on random element and clicking one of its children
+        When user move mouse cursor over Computers, Electronics or Apparel
+        And choose one of its children in the dropdown menu
+        Then user should be in the selected page
