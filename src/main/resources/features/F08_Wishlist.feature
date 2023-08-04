@@ -1,4 +1,3 @@
-@test
 @smoke
 Feature: Wishlist | Test wishlist functionalities
     Scenario: Adding a product to wishlist
