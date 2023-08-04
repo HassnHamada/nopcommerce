@@ -10,11 +10,10 @@ import com.nopcommerce.app.Pages.HomePage;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 
 public class Hooks {
 
-    public final static int T_SLEEP_MS = 10000, I_W_MS = 10000, E_W_MS = 10000;
+    public final static int T_SLEEP_MS = 3000, I_W_MS = 10000, E_W_MS = 3000;
 
     private final Duration I_W_DURATION = Duration.ofMillis(I_W_MS), E_W_DURATION = Duration.ofMillis(E_W_MS);
 
