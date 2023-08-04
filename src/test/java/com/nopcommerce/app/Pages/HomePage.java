@@ -21,6 +21,9 @@ public class HomePage {
     private final static String _currency = "select[id=\"customerCurrency\"]";
     private final static String _products = "div[class=\"product-grid home-page-product-grid\"] span[class=\"price actual-price\"]";
     private final static String _searchBox = "input[class=\"search-box-text ui-autocomplete-input\"]";
+    private final static String _slider = "div[id=\"nivo-slider\"]";
+    private final static String _firstSlider = "div[class=\"nivo-controlNav\"] > a:nth-child(1)";
+    private final static String _secondSlider = "div[class=\"nivo-controlNav\"] > a:nth-child(2)";
 
     public static WebElement navComputers() {
         return Hooks.driver.findElement(By.cssSelector(_navComputers));
@@ -64,5 +67,17 @@ public class HomePage {
 
     public static WebElement searchBox() {
         return Hooks.driver.findElement(By.cssSelector(_searchBox));
+    }
+
+    public static WebElement slider() {
+        return Hooks.driver.findElement(By.cssSelector(_slider));
+    }
+
+    public static WebElement firstSlider() {
+        return Hooks.driver.findElement(By.cssSelector(_firstSlider));
+    }
+
+    public static WebElement secondSlider() {
+        return Hooks.driver.findElement(By.cssSelector(_secondSlider));
     }
 }
