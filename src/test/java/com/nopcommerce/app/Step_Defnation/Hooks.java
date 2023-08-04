@@ -21,11 +21,6 @@ public class Hooks {
     public static WebDriver driver;
     public static WebDriverWait wait;
 
-    @Given("user at home page")
-    public void goToHome() {
-        driver.navigate().to(HomePage.URL);
-    }
-
     @Before
     public void before() {
         driver = new EdgeDriver();

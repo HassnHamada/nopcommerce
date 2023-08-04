@@ -6,10 +6,17 @@ import org.testng.Assert;
 
 import com.nopcommerce.app.Pages.HomePage;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class D06_HomeSliders {
+
+    @Given("user at home page")
+    public void goToHome() {
+        Hooks.driver.navigate().to(HomePage.URL);
+    }
+
     @When("user clicks the {string} slider")
     public void clickSlider(final String SLIDER) throws Exception {
         WebElement currentSlider = SLIDER.equals("first") ? HomePage.firstSlider() : HomePage.secondSlider();

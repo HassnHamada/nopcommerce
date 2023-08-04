@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import com.nopcommerce.app.Step_Defnation.Hooks;
 
 public class HomePage {
-    public final static String URL = "https://demo.nopcommerce.com";
+    public final static String URL = "https://demo.nopcommerce.com/";
 
     private final static String _navComputers = "ul[class=\"top-menu notmobile\"] > li:nth-child(1)";
     private final static String _navElectronics = "ul[class=\"top-menu notmobile\"] > li:nth-child(2)";
@@ -24,6 +24,7 @@ public class HomePage {
     private final static String _slider = "div[id=\"nivo-slider\"]";
     private final static String _firstSlider = "div[class=\"nivo-controlNav\"] > a:nth-child(1)";
     private final static String _secondSlider = "div[class=\"nivo-controlNav\"] > a:nth-child(2)";
+    private final static String _networks = "ul[class=\"networks\"]";
 
     public static WebElement navComputers() {
         return Hooks.driver.findElement(By.cssSelector(_navComputers));
@@ -79,5 +80,9 @@ public class HomePage {
 
     public static WebElement secondSlider() {
         return Hooks.driver.findElement(By.cssSelector(_secondSlider));
+    }
+
+    public static WebElement networks() {
+        return Hooks.driver.findElement(By.cssSelector(_networks));
     }
 }
