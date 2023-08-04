@@ -11,7 +11,7 @@ public class SearchPage {
     public final static String URL = "https://demo.nopcommerce.com/search?q=";
 
     private final static String _products = "div[class=\"item-grid\"] h2[class=\"product-title\"] a";
-    private final static String _next = "li[class=\"next-page\"] a";
+    private final static String _next = "li[class=\"next-page\"]";
     private final static String _title = "div[class=\"page-title\"] h1";
 
     public static List<WebElement> products() {

@@ -1,4 +1,3 @@
-@test
 @smoke
 Feature: HomeSliders | Test sliders navigating you to the right page
     Scenario: User may click the first slider 

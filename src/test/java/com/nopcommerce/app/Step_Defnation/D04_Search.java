@@ -3,6 +3,9 @@ package com.nopcommerce.app.Step_Defnation;
 import java.util.List;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
 
@@ -22,7 +25,7 @@ public class D04_Search {
     }
 
     @Then("products with {string} should appear")
-    public void assertProducts(String keyword) throws InterruptedException {
+    public void assertProducts(String keyword) {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains(SearchPage.URL));
         for (WebElement product : SearchPage.products()) {
