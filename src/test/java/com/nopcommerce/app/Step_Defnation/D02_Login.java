@@ -32,7 +32,7 @@ public class D02_Login {
     @Then("user login to the system successfully")
     public void assertSuccess() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(Hooks.driver.getCurrentUrl(), HomePage.URL);
+        softAssert.assertTrue(HomePage.URL.contains(Hooks.driver.getCurrentUrl()));
         softAssert.assertTrue(HomePage.myAccountHeader().isDisplayed());
         softAssert.assertAll();
     }

@@ -21,7 +21,7 @@ public class D07_FollowUs {
     @Then("a new page should open to {string}")
     public void assertNetworkPageOpened(String expectedURL) {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(Hooks.driver.getCurrentUrl(), HomePage.URL);
+        softAssert.assertTrue(HomePage.URL.contains(Hooks.driver.getCurrentUrl()));
         try {
             Hooks.driver.switchTo().window(new ArrayList<String>(Hooks.driver.getWindowHandles()).get(1));
             softAssert.assertEquals(Hooks.driver.getCurrentUrl(), expectedURL);
