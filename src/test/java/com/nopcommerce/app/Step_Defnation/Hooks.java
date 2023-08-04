@@ -13,7 +13,7 @@ import io.cucumber.java.Before;
 
 public class Hooks {
 
-    public final static int T_SLEEP_MS = 3000, I_W_MS = 10000, E_W_MS = 3000;
+    public final static int T_SLEEP_MS = 3000, I_W_MS = 10000, E_W_MS = 10000;
 
     private final Duration I_W_DURATION = Duration.ofMillis(I_W_MS), E_W_DURATION = Duration.ofMillis(E_W_MS);
 

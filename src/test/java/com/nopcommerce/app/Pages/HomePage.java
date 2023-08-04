@@ -25,6 +25,9 @@ public class HomePage {
     private final static String _firstSlider = "div[class=\"nivo-controlNav\"] > a:nth-child(1)";
     private final static String _secondSlider = "div[class=\"nivo-controlNav\"] > a:nth-child(2)";
     private final static String _networks = "ul[class=\"networks\"]";
+    private final static String _HTCOneM8Phone = "div.home-page-product-grid > div.item-grid > :nth-child(3)";
+    private final static String _wishlistHeader = "a.ico-wishlist";
+    private final static String _notification = "#bar-notification";
 
     public static WebElement navComputers() {
         return Hooks.driver.findElement(By.cssSelector(_navComputers));
@@ -84,5 +87,17 @@ public class HomePage {
 
     public static WebElement networks() {
         return Hooks.driver.findElement(By.cssSelector(_networks));
+    }
+
+    public static WebElement HTCOneM8Phone() {
+        return Hooks.driver.findElement(By.cssSelector(_HTCOneM8Phone));
+    }
+
+    public static WebElement wishlistHeader() {
+        return Hooks.driver.findElement(By.cssSelector(_wishlistHeader));
+    }
+
+    public static WebElement notification() {
+        return Hooks.driver.findElement(By.cssSelector(_notification));
     }
 }
