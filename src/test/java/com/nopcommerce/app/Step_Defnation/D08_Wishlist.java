@@ -2,7 +2,6 @@ package com.nopcommerce.app.Step_Defnation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.Color;
 import org.testng.asserts.SoftAssert;
 
 import com.nopcommerce.app.Pages.HomePage;

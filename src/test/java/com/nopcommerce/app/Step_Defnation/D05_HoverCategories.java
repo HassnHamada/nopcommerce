@@ -21,7 +21,7 @@ public class D05_HoverCategories {
     private static String expected;
 
     @When("user move mouse cursor over Computers, Electronics or Apparel")
-    public void randMode() {
+    public void randHover() {
         List<WebElement> choices = Arrays.asList(
                 HomePage.navComputers(),
                 HomePage.navElectronics(),
@@ -39,7 +39,7 @@ public class D05_HoverCategories {
     }
 
     @Then("user should be in the selected page")
-    public void assertInCameraPhotoPage() {
+    public void assertPage() {
         Assert.assertEquals(SearchPage.title().getText(), expected);
     }
 }

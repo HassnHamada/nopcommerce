@@ -34,7 +34,7 @@ public class D06_HomeSliders {
     }
 
     @Then("user should be navigated to {string}")
-    public void assertInCameraPhotoPage(final String EXPECTED) {
+    public void assertNavigated(final String EXPECTED) {
         Assert.assertEquals(Hooks.driver.getCurrentUrl(), EXPECTED);
     }
 }
